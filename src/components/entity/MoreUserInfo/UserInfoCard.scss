@@ -1,0 +1,36 @@
+@import "../../../styles/global.scss";
+
+.userInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.userInfo img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10%;
+  border: 2px solid $primaryColour;
+  flex-shrink: 0;
+}
+
+.userInfoDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.userInfoDetails p {
+  font-size: 1rem;
+  color: $secondaryColour;
+}
+
+.userInfoDetails strong {
+  color: $primaryColour;
+  margin-right: 0.5rem;
+}

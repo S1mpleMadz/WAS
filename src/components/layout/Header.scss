@@ -1,0 +1,56 @@
+@import "../../styles/global.scss";
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  background: $primaryColour;
+
+  .headerText {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      color: white;
+      margin: 0;
+      font-size: 30px;
+    }
+  }
+
+  .headerActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .welcome {
+      color: white;
+      margin: 0;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    button {
+      padding: 6px 12px;
+      background-color: white;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      color: $primaryColour;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+
+    .logo {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+  }
+}

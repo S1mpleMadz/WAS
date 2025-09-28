@@ -1,0 +1,29 @@
+ModuleEffort was a potential way of storing the total effort. However, it would need to be repopulated if credits or size changed. I was unsure about it when I added this field. Perhaps we should delete it as it could get out of sync with the formula.
+ 
+ModuleEffort = ModuleLeadingEffort + LecturingEffort + WorkshopEffort + MarkingEffort
+
+
+ModuleLeadingEffort = MAX(LeadingMinimum, LeadingMultiplier * ModuleSize) // There is a minimum amount which increased with the module size.
+
+LeadingMinimum = 50 // I just made these up!!
+
+LeadingMultiplier = 0.3
+
+LecturingEffort = LecturingMultiplier * IF(ModuleCredit=15, 22 weeks, 44 weeks) * 2 hours/week
+
+LecturingMultiplier = 2 // Prep for lecturing 
+
+WorkshopEffort  = WorkshopMultiplier * IF(ModuleCredit=15, 22 weeks, 44 weeks) * 2 hours/week * NumberOfWeeklyWorkshops
+
+WorkshopMultiplier = 1.5 // Prep for workshops
+
+NumberOfWeeklyWorkshops = ROUNDUP( ModuleSize / WorkshopSize )
+
+WorkshopSize = 100
+
+MarkingEffort = ModuleSize * MarkingTimePerStudent
+
+MarkingTimePerStudent = 1 // One hour
+
+ 
+LeadingMinimum, LeadingMultiplier, LecturingMultiplier , WorkshopMultiplier, WorkshopSize and MarkingTimePerStudent are all examples of business logic parameters which should be stored in a JS file somewhere imported where needed.

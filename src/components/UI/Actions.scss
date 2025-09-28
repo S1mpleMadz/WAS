@@ -1,0 +1,55 @@
+@import "../../styles/global.scss";
+
+/* -------------------------------------------- */
+/* Styling //////////////////////////////////// */
+/* -------------------------------------------- */
+
+div.ActionTray {
+  /* Appearance */
+
+  /* Layout */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button.Action {
+  /* Appearance */
+  height: 36px;
+  padding: 5px;
+  background: inherit;
+  border: 2px solid $tertiaryColour;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: white;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  p {
+    flex: 1;
+    min-width: 50px;
+    text-align: center;
+    margin-right: 5px;
+    color: rgba(0, 0, 0, 0.836);
+    font-size: 14px;
+  }
+
+  img {
+    filter: opacity(0.8);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    p {
+      color: rgba(0, 0, 0, 0.8);
+    }
+    img {
+      filter: opacity(0.8);
+    }
+  }
+}

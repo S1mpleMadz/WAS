@@ -1,0 +1,20 @@
+@import "../../styles/global.scss";
+
+.formBox {
+  width: 600px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,36 @@
+@import "../../styles/global.scss";
+
+.filter-section {
+  margin-bottom: 15px;
+
+  .title {
+    color: $primaryColour;
+    margin-bottom: 8px;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+
+    input[type="checkbox"] {
+      flex-shrink: 0;
+      margin-right: 6px;
+      cursor: pointer;
+      accent-color: $primaryColour;
+    }
+
+    span {
+      flex: 1;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

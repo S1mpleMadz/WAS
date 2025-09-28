@@ -1,0 +1,14 @@
+@import "../../styles/global.scss";
+
+footer {
+  height: 50px;
+  padding: 0 5px;
+  background: $primaryColour;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p.thankyou {
+    color: White;
+  }
+}

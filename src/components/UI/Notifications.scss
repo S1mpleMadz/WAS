@@ -1,0 +1,25 @@
+div.notificationAlert {
+  header {
+    background-color: dodgerblue !important;
+  }
+}
+
+div.notificationConfirm {
+  header {
+    background-color: orange !important;
+  }
+}
+div.notificationError {
+  header {
+    background-color: red !important;
+  }
+}
+
+div.notificationAlert,
+div.notificationConfirm,
+div.notificationError {
+  main p {
+    min-width: 200px;
+    text-align: center;
+  }
+}

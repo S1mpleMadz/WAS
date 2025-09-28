@@ -1,0 +1,55 @@
+@import "../../styles/global.scss";
+
+div.ModalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: $ModalBackground;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+
+  div.ModalPane {
+    background-color: #fff;
+    border-radius: $ModalRadius;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: $ModalShadow;
+    overflow: hidden;
+    animation: slideUp 0.3s ease-out;
+
+    header {
+      background-color: $primaryColour;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 16px 24px;
+      justify-content: center;
+    }
+
+    main {
+      padding: 24px;
+      background-color: #f9f9f9;
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: $ModalBackground;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

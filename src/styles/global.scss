@@ -1,0 +1,18 @@
+$primaryColour: #2b97e4;
+$secondaryColour: #190b28;
+$tertiaryColour: #1e3c72;
+$quaternaryColour: #c4edfa;
+$bgColour: linear-gradient(to top, $primaryColour, $quaternaryColour, $quaternaryColour, white);
+
+$btnColour: #1e3c72;
+$btnTextColour: white;
+$mixedColour: mix($secondaryColour, $primaryColour, 50%);
+$warningColour: #a84232;
+$successColour: #39c402;
+
+$ModalBackground: rgba(0, 0, 0, 0.6);
+$ModalShadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+$ModalRadius: 12px;
+
+$lightGradient: linear-gradient(to top, $primaryColour, $quaternaryColour);
+$darkGradient: linear-gradient(to top, $secondaryColour, $mixedColour);

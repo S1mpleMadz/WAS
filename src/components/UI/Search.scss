@@ -1,0 +1,25 @@
+@import "../../styles/global.scss";
+
+.search-input {
+  width: 100%;
+  margin-bottom: 15px;
+
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+
+    &:focus {
+      border-color: $primaryColour;
+      border-width: 2px;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+}

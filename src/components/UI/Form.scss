@@ -1,0 +1,77 @@
+@import "../../styles/global.scss";
+
+$BorderGrey: #a3a3a3;
+$Red: #edafb8;
+$DarkRed: darken($Red, 20%);
+$Green: #29e7cd;
+$DarkGreen: darken($Green, 10%);
+$InputPadding: 10px;
+$InputRadius: 6px;
+$FontSize: 16px;
+
+div.Form {
+  border: 1px solid $BorderGrey;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+  background-color: white;
+  max-height: 60vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  div.FormTray {
+    width: 100%;
+
+    div.FormItem {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+
+      div.FormLabel {
+        font-weight: 600;
+        font-size: 14px;
+        color: #333;
+      }
+
+      label,
+      input,
+      select {
+        width: 100%;
+        font-size: $FontSize;
+      }
+
+      select,
+      input {
+        padding: $InputPadding;
+        border-radius: $InputRadius;
+        border: 1px solid $BorderGrey;
+        background: white;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+          border-color: $DarkGreen;
+        }
+
+        &:focus {
+          border-color: $DarkGreen;
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(41, 231, 205, 0.3);
+        }
+      }
+
+      p.FormAdvice {
+        color: $DarkGreen;
+        font-size: 90%;
+      }
+
+      p.FormError {
+        color: $DarkRed;
+        font-weight: 500;
+        font-size: 90%;
+      }
+    }
+  }
+}

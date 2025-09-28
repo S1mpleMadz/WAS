@@ -1,0 +1,48 @@
+div.dutyCard {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  //temp information display css
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    .duty-details {
+      .duty-name {
+        color: white !important;
+      }
+    }
+  }
+
+  .duty-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .duty-name {
+      flex: 1;
+      font-weight: bold;
+      color: black;
+      text-align: left;
+    }
+
+    .info {
+      color: darkgray;
+      white-space: nowrap;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        background-color: #dee2e6;
+        margin-right: 12px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

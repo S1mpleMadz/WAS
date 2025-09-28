@@ -1,0 +1,57 @@
+@import "../../styles/global.scss";
+
+.chartsContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.tabs {
+  width: 100%;
+}
+
+.tab-headers {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tab-header {
+  flex: 1;
+  padding: 0.2rem 1rem;
+  border-radius: 0.75rem;
+  background: lightgray;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    background: $primaryColour;
+    color: white;
+  }
+
+  &.active {
+    background: $primaryColour;
+    color: white;
+  }
+}
+
+.tab-content {
+  width: 100%;
+}
+
+.chartCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 16px lightgrey;
+  display: flex;
+  flex-direction: column;
+}
+.status {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: white;
+}

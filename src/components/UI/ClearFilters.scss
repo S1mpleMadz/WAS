@@ -1,0 +1,39 @@
+@import "../../styles/global.scss";
+
+.clear-filters {
+  margin-top: 1rem;
+
+  .clear-button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    color: gray;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background-color: white;
+      border-color: lightgray;
+      color: black;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled) {
+      background-color: $primaryColour;
+      border-color: $primaryColour;
+      color: black;
+
+      &:hover {
+        background-color: lighten($primaryColour, 20%);
+        border-color: white;
+      }
+    }
+  }
+}

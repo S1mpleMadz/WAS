@@ -1,0 +1,31 @@
+@import "../../styles/global.scss";
+
+.sidebar {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+aside {
+  flex-shrink: 0;
+  width: 300px;
+  padding: 20px;
+  background-color: $secondaryColour;
+  border-radius: 8px;
+}
+
+div.searchContainer {
+  width: 100%;
+
+  h2 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+}

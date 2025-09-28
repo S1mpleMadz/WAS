@@ -1,0 +1,32 @@
+@import "../../styles/global.scss";
+
+.pagination {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+
+  .pagination-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid lightgray;
+    background: white;
+    border: 2px solid $tertiaryColour;
+    border-radius: 12px;
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      background: #f5f5f5;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .pagination-info {
+    font-size: 0.9rem;
+    color: #666;
+  }
+}
